@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#1a3a6b"/>
+    </linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8c0a8"/>
+      <stop offset="100%" stop-color="#8a8070"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <!-- Stars -->
+  <g fill="#fff" opacity="0.4">
+    <circle cx="200" cy="80" r="1.2"/><circle cx="450" cy="50" r="1"/><circle cx="700" cy="100" r="1.5"/>
+    <circle cx="950" cy="60" r="1"/><circle cx="1200" cy="90" r="1.3"/><circle cx="1500" cy="40" r="1"/>
+    <circle cx="1750" cy="110" r="1.2"/><circle cx="320" cy="150" r="0.8"/><circle cx="820" cy="170" r="1"/>
+    <circle cx="1100" cy="130" r="1.1"/><circle cx="1650" cy="160" r="0.9"/>
+  </g>
+  <!-- Ground -->
+  <rect y="820" width="1920" height="260" fill="#1a1408"/>
+  <!-- Courthouse steps -->
+  <rect x="560" y="760" width="800" height="30" fill="#b0a890"/>
+  <rect x="520" y="790" width="880" height="30" fill="#a89e84"/>
+  <rect x="480" y="820" width="960" height="30" fill="#9e9478"/>
+  <!-- Courthouse base -->
+  <rect x="540" y="380" width="840" height="380" fill="#c8bfa0"/>
+  <!-- Columns -->
+  <g fill="#d4cbb0">
+    <rect x="580" y="390" width="52" height="370"/>
+    <rect x="660" y="390" width="52" height="370"/>
+    <rect x="740" y="390" width="52" height="370"/>
+    <rect x="820" y="390" width="52" height="370"/>
+    <rect x="900" y="390" width="52" height="370"/>
+    <rect x="980" y="390" width="52" height="370"/>
+    <rect x="1060" y="390" width="52" height="370"/>
+    <rect x="1140" y="390" width="52" height="370"/>
+    <rect x="1220" y="390" width="52" height="370"/>
+    <rect x="1288" y="390" width="52" height="370"/>
+  </g>
+  <!-- Column tops (capitals) -->
+  <g fill="#e0d8c0">
+    <rect x="572" y="382" width="68" height="14"/>
+    <rect x="652" y="382" width="68" height="14"/>
+    <rect x="732" y="382" width="68" height="14"/>
+    <rect x="812" y="382" width="68" height="14"/>
+    <rect x="892" y="382" width="68" height="14"/>
+    <rect x="972" y="382" width="68" height="14"/>
+    <rect x="1052" y="382" width="68" height="14"/>
+    <rect x="1132" y="382" width="68" height="14"/>
+    <rect x="1212" y="382" width="68" height="14"/>
+    <rect x="1280" y="382" width="68" height="14"/>
+  </g>
+  <!-- Entablature -->
+  <rect x="540" y="340" width="840" height="42" fill="#d4cbb0"/>
+  <rect x="540" y="330" width="840" height="12" fill="#ddd4b8"/>
+  <!-- Pediment -->
+  <polygon points="960,220 540,330 1380,330" fill="#c8bfa0"/>
+  <polygon points="960,232 555,328 1365,328" fill="#d4cbb0" opacity="0.5"/>
+  <!-- Door -->
+  <rect x="884" y="580" width="152" height="180" fill="#2a2010"/>
+  <rect x="900" y="590" width="56" height="160" fill="#1a1408"/>
+  <rect x="964" y="590" width="56" height="160" fill="#1a1408"/>
+  <!-- Door arch -->
+  <path d="M884 580 Q960 520 1036 580" fill="#2a2010"/>
+  <!-- Windows -->
+  <g fill="#2a3a5a" opacity="0.8">
+    <rect x="620" y="480" width="80" height="100"/>
+    <rect x="740" y="480" width="80" height="100"/>
+    <rect x="1100" y="480" width="80" height="100"/>
+    <rect x="1220" y="480" width="80" height="100"/>
+  </g>
+  <!-- Window bars -->
+  <g stroke="#c8bfa0" stroke-width="2" opacity="0.6">
+    <line x1="660" y1="480" x2="660" y2="580"/><line x1="620" y1="530" x2="700" y2="530"/>
+    <line x1="780" y1="480" x2="780" y2="580"/><line x1="740" y1="530" x2="820" y2="530"/>
+    <line x1="1140" y1="480" x2="1140" y2="580"/><line x1="1100" y1="530" x2="1180" y2="530"/>
+    <line x1="1260" y1="480" x2="1260" y2="580"/><line x1="1220" y1="530" x2="1300" y2="530"/>
+  </g>
+  <!-- Trees flanking -->
+  <g fill="#0d2a0d" opacity="0.7">
+    <ellipse cx="400" cy="700" rx="70" ry="120"/>
+    <ellipse cx="430" cy="750" rx="50" ry="80"/>
+    <rect x="392" y="780" width="16" height="60"/>
+    <ellipse cx="1520" cy="700" rx="70" ry="120"/>
+    <ellipse cx="1490" cy="750" rx="50" ry="80"/>
+    <rect x="1512" y="780" width="16" height="60"/>
+  </g>
+  <!-- Lamp posts -->
+  <g fill="#8a7a50">
+    <rect x="680" y="700" width="8" height="120"/>
+    <rect x="676" y="695" width="16" height="10"/>
+    <circle cx="684" cy="692" r="10" fill="#f0d870" opacity="0.8"/>
+    <rect x="1232" y="700" width="8" height="120"/>
+    <rect x="1228" y="695" width="16" height="10"/>
+    <circle cx="1236" cy="692" r="10" fill="#f0d870" opacity="0.8"/>
+  </g>
+  <!-- Overlay for dark mood -->
+  <rect width="1920" height="1080" fill="#0a1f44" opacity="0.45"/>
+</svg>

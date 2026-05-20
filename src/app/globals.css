@@ -2,26 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FAFAF8;
+    --foreground: #0A1F44;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-warm-50 text-navy font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-navy;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-gold text-navy font-semibold px-8 py-3.5
+           rounded-sm transition-all duration-300 hover:bg-gold-dark hover:shadow-gold
+           hover:-translate-y-0.5 active:translate-y-0 focus:outline-none
+           focus:ring-2 focus:ring-gold/50;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border-2 border-white text-white font-semibold
+           px-8 py-3.5 rounded-sm transition-all duration-300 hover:bg-white
+           hover:text-navy hover:-translate-y-0.5 active:translate-y-0
+           focus:outline-none focus:ring-2 focus:ring-white/50;
+  }
+
+  .btn-navy {
+    @apply inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-3.5
+           rounded-sm transition-all duration-300 hover:bg-navy-light hover:shadow-navy
+           hover:-translate-y-0.5 active:translate-y-0 focus:outline-none
+           focus:ring-2 focus:ring-navy/50;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .gold-divider {
+    @apply w-16 h-1 bg-gold mx-auto my-4;
+  }
+
+  .gold-divider-left {
+    @apply w-16 h-1 bg-gold my-4;
+  }
+
+  .section-label {
+    @apply text-gold font-semibold tracking-widest uppercase text-sm;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-card;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border border-warm-200 rounded-sm text-navy
+           placeholder:text-warm-400 focus:outline-none focus:ring-2 focus:ring-gold/40
+           focus:border-gold transition-colors duration-200;
+  }
+
+  .input-error {
+    @apply border-red-400 focus:ring-red-300/40 focus:border-red-400;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .writing-vertical {
+    writing-mode: vertical-rl;
+  }
+
+  .clip-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
+  .clip-slant-reverse {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
   }
 }
