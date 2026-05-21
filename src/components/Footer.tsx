@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FIRM_DISPLAY, FIRM_NAME, FIRM_PHONE, FIRM_EMAIL, FIRM_ADDRESS, PRACTICE_AREAS } from "@/lib/constants";
 
@@ -42,8 +43,13 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-5">
-              <p className="font-serif text-white text-xl font-bold leading-none">{FIRM_DISPLAY.primary}</p>
-              <p className="font-serif text-gold text-xs tracking-[0.22em] uppercase mt-0.5">{FIRM_DISPLAY.secondary}</p>
+              <Image
+                src="/images/logo_transparent.png"
+                alt="Shafi Law Associates"
+                width={690}
+                height={441}
+                className="h-16 w-auto brightness-0 invert opacity-80"
+              />
             </div>
             <p className="text-warm-400 text-sm leading-relaxed mb-8">
               A premier Islamabad law firm delivering sophisticated legal counsel since{" "}

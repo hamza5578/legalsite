@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FIRM_DISPLAY, FIRM_PHONE, NAV_LINKS } from "@/lib/constants";
+import { FIRM_DISPLAY, FIRM_NAME, FIRM_PHONE, NAV_LINKS } from "@/lib/constants";
 
 const overlayVariants = {
   hidden: { opacity: 0, y: "-100%" },
@@ -47,14 +48,16 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
-          {/* Logo */}
-          <Link href="/" className="group flex flex-col leading-none">
-            <span className="font-serif text-white text-lg font-bold tracking-wide group-hover:text-gold transition-colors duration-200">
-              {FIRM_DISPLAY.primary}
-            </span>
-            <span className="font-serif text-gold text-[10px] tracking-[0.28em] uppercase">
-              {FIRM_DISPLAY.secondary}
-            </span>
+          {/* Logo — full logo, no duplicate text */}
+          <Link href="/" className="group flex-shrink-0" aria-label="Shafi Law Associates — Home">
+            <Image
+              src="/images/logo_transparent.png"
+              alt="Shafi Law Associates"
+              width={690}
+              height={441}
+              className="h-14 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-200"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -152,7 +155,7 @@ export default function Navbar() {
             </div>
 
             <div className="px-8 pb-8 text-warm-500 text-xs">
-              &copy; {new Date().getFullYear()} {FIRM_DISPLAY.primary} {FIRM_DISPLAY.secondary}
+              &copy; {new Date().getFullYear()} {FIRM_NAME}
             </div>
           </motion.div>
         )}
