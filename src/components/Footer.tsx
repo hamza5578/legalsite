@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { FIRM_DISPLAY, FIRM_NAME, FIRM_PHONE, FIRM_EMAIL, FIRM_ADDRESS, PRACTICE_AREAS } from "@/lib/constants";
+import { FIRM_NAME, FIRM_PHONE, FIRM_EMAIL, FIRM_ADDRESS, PRACTICE_AREAS } from "@/lib/constants";
 
 function IconLinkedIn({ className }: { className?: string }) {
   return (

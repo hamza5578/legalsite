@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, Phone, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FIRM_DISPLAY, FIRM_NAME, FIRM_PHONE, NAV_LINKS } from "@/lib/constants";
+import { FIRM_NAME, FIRM_PHONE, NAV_LINKS } from "@/lib/constants";
 
 const overlayVariants = {
   hidden: { opacity: 0, y: "-100%" },
