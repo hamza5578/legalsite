@@ -14,90 +14,163 @@ function IconLinkedIn({ className }: { className?: string }) {
   );
 }
 
+const cardAccents = [
+  { from: "#0A1F44", via: "#0d2a5c", to: "#1a3f7a" },
+  { from: "#0f2a5c", via: "#0A1F44", to: "#071629" },
+  { from: "#071629", via: "#0d2550", to: "#0A1F44" },
+];
+
 export default function Team() {
   return (
-    <section id="team" className="section-padding bg-warm-100">
-      <div className="container-max">
+    <section id="team" className="relative overflow-hidden bg-navy py-24 px-4 sm:px-6 lg:px-8">
+
+      {/* Background pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(201,169,97,1) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,97,1) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+        aria-hidden
+      />
+      {/* Gold glow top-left */}
+      <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-gold/5 blur-3xl pointer-events-none" aria-hidden />
+      {/* Gold glow bottom-right */}
+      <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-gold/5 blur-3xl pointer-events-none" aria-hidden />
+
+      <div className="container-max relative z-10">
+
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease }}
-          className="text-center mb-14"
+          transition={{ duration: 0.65, ease }}
+          className="text-center mb-16"
         >
           <p className="section-label mb-3">Meet the Attorneys</p>
-          <h2 className="font-serif text-display-md text-navy font-bold mb-4">Our Legal Team</h2>
+          <h2 className="font-serif text-display-md text-white font-bold mb-4">Our Legal Team</h2>
           <div className="gold-divider" />
-          <p className="text-warm-500 text-lg max-w-2xl mx-auto mt-5">
-            Experienced practitioners dedicated to delivering exceptional counsel and protecting
-            your interests at every turn.
+          <p className="text-warm-300 text-lg max-w-2xl mx-auto mt-5 leading-relaxed">
+            Experienced practitioners dedicated to delivering exceptional counsel and
+            protecting your interests at every turn.
           </p>
         </motion.div>
 
-        {/* Grid — 3 members, single centered row */}
+        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {TEAM_MEMBERS.map((member, i) => (
-            <motion.div
-              key={member.id}
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.55, delay: i * 0.1, ease }}
-              className="group bg-white rounded-sm overflow-hidden border border-warm-200 transition-all duration-300 hover:shadow-[0_12px_40px_rgba(10,31,68,0.12)]"
-            >
-              {/* Square portrait */}
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-navy-light to-navy">
-                {/* Initials placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
-                  <div className="w-24 h-24 rounded-full bg-gold/20 border-2 border-gold/40 flex items-center justify-center">
-                    <span className="font-serif text-gold text-2xl font-bold">
-                      {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+          {TEAM_MEMBERS.map((member, i) => {
+            const accent = cardAccents[i % cardAccents.length];
+            return (
+              <motion.div
+                key={member.id}
+                initial={{ opacity: 0, y: 36 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: i * 0.12, ease }}
+                className="group relative"
+              >
+                {/* Gold top border accent that grows on hover */}
+                <div className="absolute top-0 inset-x-0 h-[3px] bg-gold/30 rounded-t-sm overflow-hidden z-10">
+                  <div className="h-full w-0 bg-gold group-hover:w-full transition-all duration-500 ease-out" />
+                </div>
+
+                <div className="bg-white/[0.04] border border-white/10 rounded-sm overflow-hidden transition-all duration-300 group-hover:border-gold/30 group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_0_0_1px_rgba(201,169,97,0.15)]">
+
+                  {/* Portrait area */}
+                  <div
+                    className="relative overflow-hidden"
+                    style={{
+                      aspectRatio: "3/4",
+                      background: `linear-gradient(160deg, ${accent.from}, ${accent.via}, ${accent.to})`,
+                    }}
+                  >
+                    {/* Decorative rings */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="absolute w-48 h-48 rounded-full border border-gold/8" />
+                      <div className="absolute w-36 h-36 rounded-full border border-gold/12" />
+                      <div className="absolute w-24 h-24 rounded-full border border-gold/20" />
+                    </div>
+
+                    {/* Subtle diagonal lines texture */}
+                    <div
+                      className="absolute inset-0 opacity-[0.03]"
+                      style={{
+                        backgroundImage: "repeating-linear-gradient(45deg, #C9A961 0px, #C9A961 1px, transparent 0px, transparent 50%)",
+                        backgroundSize: "20px 20px",
+                      }}
+                    />
+
+                    {/* Initials */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 transition-transform duration-500 group-hover:scale-105">
+                      <div className="w-20 h-20 rounded-full bg-gold/15 border border-gold/35 flex items-center justify-center shadow-[0_0_30px_rgba(201,169,97,0.15)]">
+                        <span className="font-serif text-gold text-xl font-bold tracking-wide">
+                          {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                        </span>
+                      </div>
+                      {/* Specialization tag */}
+                      <span className="text-warm-400 text-[10px] tracking-[0.2em] uppercase font-medium opacity-70">
+                        {member.specialization}
+                      </span>
+                    </div>
+
+                    {/* Hover social overlay */}
+                    <div className="absolute inset-0 bg-navy/75 backdrop-blur-sm flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <a
+                        href={member.linkedin}
+                        aria-label={`${member.name} LinkedIn`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="w-11 h-11 rounded-full bg-white/10 border border-white/25 flex items-center justify-center text-white hover:bg-gold hover:text-navy hover:border-gold transition-all duration-200"
+                      >
+                        <IconLinkedIn className="w-4 h-4" />
+                      </a>
+                      <a
+                        href={`mailto:${member.email}`}
+                        aria-label={`Email ${member.name}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="w-11 h-11 rounded-full bg-white/10 border border-white/25 flex items-center justify-center text-white hover:bg-gold hover:text-navy hover:border-gold transition-all duration-200"
+                      >
+                        <Mail size={16} />
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Info */}
+                  <div className="p-6 border-t border-white/8">
+                    {/* Title badge */}
+                    <span className="inline-block bg-gold/15 text-gold text-[10px] font-bold tracking-[0.18em] uppercase px-2.5 py-1 rounded-sm mb-3">
+                      {member.title}
                     </span>
+                    <h3 className="font-serif text-white text-xl font-bold leading-tight mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-warm-400 text-xs font-medium mb-4 tracking-wide">
+                      {member.role}
+                    </p>
+                    <p className="text-warm-400 text-sm leading-relaxed line-clamp-2">
+                      {member.bio}
+                    </p>
+
+                    {/* Divider + email link */}
+                    <div className="mt-5 pt-4 border-t border-white/8 flex items-center justify-between">
+                      <a
+                        href={`mailto:${member.email}`}
+                        className="text-warm-500 text-xs hover:text-gold transition-colors duration-200 truncate"
+                      >
+                        {member.email}
+                      </a>
+                      <div className="w-6 h-6 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 ml-2 group-hover:bg-gold/20 transition-colors duration-200">
+                        <Mail size={11} className="text-gold" />
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                {/* Hover overlay with social icons */}
-                <div className="absolute inset-0 bg-navy/70 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={member.linkedin}
-                    aria-label={`${member.name} LinkedIn`}
-                    onClick={(e) => e.stopPropagation()}
-                    className="w-10 h-10 rounded-full bg-white/10 border border-white/30 flex items-center justify-center text-white hover:bg-gold hover:text-navy hover:border-gold transition-all duration-200"
-                  >
-                    <IconLinkedIn className="w-4 h-4" />
-                  </a>
-                  <a
-                    href={`mailto:${member.email}`}
-                    aria-label={`Email ${member.name}`}
-                    onClick={(e) => e.stopPropagation()}
-                    className="w-10 h-10 rounded-full bg-white/10 border border-white/30 flex items-center justify-center text-white hover:bg-gold hover:text-navy hover:border-gold transition-all duration-200"
-                  >
-                    <Mail size={16} />
-                  </a>
-                </div>
-
-                {/* Role badge */}
-                <div className="absolute bottom-0 inset-x-0 bg-navy/75 backdrop-blur-sm px-4 py-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-gold text-xs font-semibold tracking-wide truncate">{member.role}</p>
-                </div>
-              </div>
-
-              {/* Info */}
-              <div className="p-5">
-                <h3 className="font-serif text-navy text-[1.1rem] font-bold leading-snug mb-0.5">
-                  {member.name}
-                </h3>
-                <p className="text-gold text-xs font-semibold uppercase tracking-wider mb-3">
-                  {member.title}
-                </p>
-                <p className="text-warm-500 text-sm leading-relaxed line-clamp-2">
-                  {member.bio}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
+
       </div>
     </section>
   );
