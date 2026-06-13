@@ -128,14 +128,14 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 2,
-    name: "Gufraan Manzoor",
+    name: "Ghufran Manzoor",
     title: "Senior Partner",
     role: "Advocate High Court",
     specialization: "Corporate & Property Law",
     bio: "Specialises in corporate transactions and property law, delivering practical, results-driven counsel to businesses and investors. Known for meticulous due diligence and seamless deal execution across commercial matters.",
     image: "/images/team-2.jpg",
     linkedin: "#",
-    email: "gufraan@shafilaw.com",
+    email: "ghufran@shafilaw.com",
   },
   {
     id: 3,
