@@ -82,7 +82,7 @@ export default function Team() {
                   <div
                     className="relative overflow-hidden"
                     style={{
-                      aspectRatio: "3/4",
+                      aspectRatio: "4/3",
                       background: `linear-gradient(160deg, ${accent.from}, ${accent.via}, ${accent.to})`,
                     }}
                   >
@@ -103,14 +103,14 @@ export default function Team() {
                     />
 
                     {/* Initials */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 transition-transform duration-500 group-hover:scale-105">
-                      <div className="w-20 h-20 rounded-full bg-gold/15 border border-gold/35 flex items-center justify-center shadow-[0_0_30px_rgba(201,169,97,0.15)]">
-                        <span className="font-serif text-gold text-xl font-bold tracking-wide">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 transition-transform duration-500 group-hover:scale-105">
+                      <div className="w-24 h-24 rounded-full bg-gold/15 border-2 border-gold/40 flex items-center justify-center shadow-[0_0_40px_rgba(201,169,97,0.2)]">
+                        <span className="font-serif text-gold text-2xl font-bold tracking-wide">
                           {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
                         </span>
                       </div>
                       {/* Specialization tag */}
-                      <span className="text-warm-400 text-[10px] tracking-[0.2em] uppercase font-medium opacity-70">
+                      <span className="text-warm-300 text-[10px] tracking-[0.22em] uppercase font-medium px-3 py-1 border border-white/10 rounded-sm bg-white/5">
                         {member.specialization}
                       </span>
                     </div>
@@ -137,7 +137,7 @@ export default function Team() {
                   </div>
 
                   {/* Info */}
-                  <div className="p-6 border-t border-white/8">
+                  <div className="p-7 border-t border-white/8">
                     {/* Title badge */}
                     <span className="inline-block bg-gold/15 text-gold text-[10px] font-bold tracking-[0.18em] uppercase px-2.5 py-1 rounded-sm mb-3">
                       {member.title}
@@ -148,12 +148,12 @@ export default function Team() {
                     <p className="text-warm-400 text-xs font-medium mb-4 tracking-wide">
                       {member.role}
                     </p>
-                    <p className="text-warm-400 text-sm leading-relaxed line-clamp-2">
+                    <p className="text-warm-300 text-sm leading-relaxed">
                       {member.bio}
                     </p>
 
                     {/* Divider + email link */}
-                    <div className="mt-5 pt-4 border-t border-white/8 flex items-center justify-between">
+                    <div className="mt-6 pt-5 border-t border-white/8 flex items-center justify-between">
                       <a
                         href={`mailto:${member.email}`}
                         className="text-warm-500 text-xs hover:text-gold transition-colors duration-200 truncate"

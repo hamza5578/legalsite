@@ -151,10 +151,10 @@ export default function ContactPage() {
               <div className="rounded-sm overflow-hidden border border-warm-200 shadow-card">
                 <div className="bg-gradient-to-br from-navy to-navy-light aspect-video flex flex-col items-center justify-center text-center p-8">
                   <MapPin size={32} className="text-gold mb-3 opacity-80" />
-                  <p className="font-serif text-white text-lg font-bold">Blue Area, Islamabad</p>
-                  <p className="text-warm-400 text-sm mt-1">Jinnah Avenue</p>
+                  <p className="font-serif text-white text-lg font-bold">House No 500, Street 8</p>
+                  <p className="text-warm-400 text-sm mt-1">F-10/2, Islamabad</p>
                   <a
-                    href="https://maps.google.com/?q=Blue+Area+Islamabad"
+                    href="https://www.google.com/maps/place/33%C2%B041'41.1%22N+72%C2%B059'53.1%22E/@33.6947556,72.9955178,871m/data=!3m1!1e3!4m4!3m3!8m2!3d33.6947556!4d72.9980927"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-4 text-gold text-xs font-semibold underline underline-offset-2 hover:text-gold-light transition-colors duration-200"
