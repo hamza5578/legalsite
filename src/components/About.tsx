@@ -72,15 +72,8 @@ export default function About() {
                 className="object-cover object-center"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              {/* Gradient overlay at bottom for label readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
-              {/* Label */}
-              <div className="absolute bottom-0 inset-x-0 p-6">
-                <p className="font-serif text-white text-lg font-semibold leading-none">
-                  Islamabad High Court
-                </p>
-                <p className="text-warm-300 text-xs mt-1">Where we practice — IHC, Islamabad</p>
-              </div>
+              {/* Subtle gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent" />
             </div>
 
             {/* Smaller offset "team" image */}
