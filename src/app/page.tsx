@@ -2,7 +2,8 @@ import Hero from "@/components/Hero";
 import PracticeAreas from "@/components/PracticeAreas";
 import About from "@/components/About";
 import Team from "@/components/Team";
-import Testimonials from "@/components/Testimonials";
+import FAQSection from "@/components/FAQSection";
+import CTAStrip from "@/components/CTAStrip";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -12,7 +13,8 @@ export default function Home() {
       <PracticeAreas />
       <About />
       <Team />
-      <Testimonials />
+      <FAQSection />
+      <CTAStrip />
       <Contact />
     </main>
   );

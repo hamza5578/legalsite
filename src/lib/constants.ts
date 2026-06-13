@@ -121,7 +121,7 @@ export const TEAM_MEMBERS = [
     title: "Founding Partner",
     role: "Senior Advocate Supreme Court",
     specialization: "Corporate & Tax Law",
-    bio: "25+ years championing corporate and tax matters across Pakistan's superior courts and tribunals.",
+    bio: "20+ years championing corporate and tax matters across Pakistan's superior courts and tribunals.",
     image: "/images/team-1.jpg",
     linkedin: "#",
     email: "shafi@shafilaw.com",
@@ -150,19 +150,8 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 4,
-    name: "Bilal Mahmood",
-    title: "Partner",
-    role: "Criminal Defense Specialist",
-    specialization: "Criminal Defense",
-    bio: "A tenacious criminal defense attorney with a strong record of acquittals and reduced charges.",
-    image: "/images/team-3.jpg",
-    linkedin: "#",
-    email: "bilal@shafilaw.com",
-  },
-  {
-    id: 5,
     name: "Gufraan Manzoor",
-    title: "Partner",
+    title: "Senior Partner",
     role: "Advocate High Court",
     specialization: "Corporate & Property Law",
     bio: "Specialises in corporate transactions and property law, delivering commercially pragmatic advice to businesses and investors.",
@@ -171,15 +160,26 @@ export const TEAM_MEMBERS = [
     email: "gufraan@shafilaw.com",
   },
   {
+    id: 5,
+    name: "Farhan Ahmed",
+    title: "Partner",
+    role: "Criminal Defense Specialist",
+    specialization: "Criminal Defense & NAB",
+    bio: "A tenacious criminal defense attorney with a strong record of acquittals across sessions courts and the Islamabad High Court.",
+    image: "/images/team-3.jpg",
+    linkedin: "#",
+    email: "farhan@shafilaw.com",
+  },
+  {
     id: 6,
-    name: "Ayesha Tariq",
-    title: "Associate",
-    role: "Family & Property Law Advocate",
-    specialization: "Family & Property Law",
-    bio: "Compassionate and results-driven in family law, with growing expertise in real estate transactions.",
+    name: "Bilal Mahmood",
+    title: "Partner",
+    role: "Tax & Family Law Advocate",
+    specialization: "Tax & Family Law",
+    bio: "Results-driven advocate with expertise in FBR disputes, family law matters, and real estate transactions.",
     image: "/images/team-4.jpg",
     linkedin: "#",
-    email: "ayesha@shafilaw.com",
+    email: "bilal@shafilaw.com",
   },
 ];
 
@@ -235,13 +235,13 @@ export const TESTIMONIALS = [
 ];
 
 export const STATS = [
-  { value: 25, suffix: "+", label: "Years of Experience" },
+  { value: 20, suffix: "+", label: "Years of Experience" },
   { value: 500, suffix: "+", label: "Cases Won" },
   { value: 1200, suffix: "+", label: "Clients Served" },
-  { value: 8, suffix: "", label: "Expert Lawyers" },
+  { value: 6, suffix: "", label: "Expert Lawyers" },
 ];
 
 export const ABOUT_PARAGRAPHS = [
-  "Founded in 1999, Shafi Law Associates has grown from a single-attorney practice into one of Islamabad's most trusted full-service law firms. We represent individuals, corporations, and institutions across Pakistan's superior courts, tribunals, and regulatory bodies.",
-  "Our philosophy is simple: every client deserves counsel that is thorough, strategic, and fiercely committed to their interests. Whether navigating a complex corporate transaction or a personal legal crisis, we bring the same relentless dedication to every matter we handle.",
+  "Founded in 1999 by Muhammad Shafi and Babar Manzoor, Shafi Law Associates began as a two-partner boutique with a single conviction: that clients in Pakistan's courts deserved the same calibre of representation available in the world's leading legal markets. Over two decades, that conviction has built one of Islamabad's most respected full-service practices.",
+  "Today our team of six advocates appears before the Islamabad High Court, Pakistan's superior courts, and the country's principal regulatory bodies. We take on only the matters we can handle with full commitment — which means every client receives the focused attention their case demands, not the fragmented service of an overstretched firm.",
 ];

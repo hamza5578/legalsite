@@ -62,19 +62,93 @@ export default function About() {
             transition={{ duration: 0.8, ease }}
             className="relative"
           >
-            {/* Main image block */}
+            {/* Main image block — Islamabad High Court */}
             <div className="relative rounded-sm overflow-hidden aspect-[4/3] shadow-navy">
-              <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy-dark" />
-              <div className="absolute inset-0 flex items-end p-8">
+              <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                {/* Sky */}
+                <defs>
+                  <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#1a3a6b"/>
+                    <stop offset="100%" stopColor="#2d5fa6"/>
+                  </linearGradient>
+                  <linearGradient id="groundG" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#0e2444"/>
+                    <stop offset="100%" stopColor="#071629"/>
+                  </linearGradient>
+                </defs>
+                <rect width="800" height="600" fill="url(#skyG)"/>
+                {/* Subtle clouds */}
+                <ellipse cx="150" cy="80" rx="90" ry="22" fill="white" opacity="0.06"/>
+                <ellipse cx="600" cy="60" rx="110" ry="18" fill="white" opacity="0.05"/>
+                {/* Ground */}
+                <rect x="0" y="480" width="800" height="120" fill="url(#groundG)"/>
+                {/* Steps */}
+                <rect x="50" y="460" width="700" height="20" rx="2" fill="#0a1f44"/>
+                <rect x="80" y="445" width="640" height="18" rx="2" fill="#0d2550"/>
+                <rect x="110" y="430" width="580" height="17" rx="2" fill="#0f2a5a"/>
+                {/* Main building body */}
+                <rect x="120" y="200" width="560" height="232" fill="#0d2655"/>
+                {/* Central portico / pediment */}
+                <polygon points="280,130 520,130 540,200 260,200" fill="#0a1f44"/>
+                {/* Pediment detail line */}
+                <polygon points="290,138 510,138 528,196 272,196" fill="none" stroke="#C9A961" strokeWidth="1.5" opacity="0.6"/>
+                {/* Columns row */}
+                {[170,230,290,350,410,470,530,590].map((x, i) => (
+                  <g key={i}>
+                    <rect x={x} y="200" width="18" height="230" fill="#0a1e44" rx="2"/>
+                    {/* Column capital */}
+                    <rect x={x-3} y="197" width="24" height="8" fill="#0d2550" rx="1"/>
+                    {/* Column base */}
+                    <rect x={x-3} y="426" width="24" height="8" fill="#0d2550" rx="1"/>
+                  </g>
+                ))}
+                {/* Central arch / entrance */}
+                <path d="M340,430 L340,310 Q400,270 460,310 L460,430 Z" fill="#071629"/>
+                <path d="M345,428 L345,315 Q400,278 455,315 L455,428 Z" fill="#050f1e" opacity="0.8"/>
+                {/* Arch highlight */}
+                <path d="M340,310 Q400,270 460,310" fill="none" stroke="#C9A961" strokeWidth="2" opacity="0.5"/>
+                {/* Windows upper floor */}
+                {[150,220,290,490,560,630].map((x, i) => (
+                  <g key={i}>
+                    <rect x={x} y="240" width="40" height="60" rx="2" fill="#071629"/>
+                    <rect x={x+2} y="242" width="36" height="56" rx="1" fill="#0a1635" opacity="0.7"/>
+                    {/* Window arch top */}
+                    <path d={`M${x},260 Q${x+20},242 ${x+40},260`} fill="#071629"/>
+                    <line x1={x} y1="270" x2={x+40} y2="270" stroke="#C9A961" strokeWidth="0.5" opacity="0.3"/>
+                    <line x1={x+20} y1="242" x2={x+20} y2="300" stroke="#C9A961" strokeWidth="0.5" opacity="0.3"/>
+                  </g>
+                ))}
+                {/* Windows lower floor */}
+                {[150,220,490,560].map((x, i) => (
+                  <g key={i}>
+                    <rect x={x} y="340" width="40" height="70" rx="2" fill="#071629"/>
+                    <rect x={x+2} y="342" width="36" height="66" rx="1" fill="#0a1635" opacity="0.6"/>
+                    <line x1={x+20} y1="342" x2={x+20} y2="410" stroke="#C9A961" strokeWidth="0.5" opacity="0.3"/>
+                    <line x1={x} y1="377" x2={x+40} y2="377" stroke="#C9A961" strokeWidth="0.5" opacity="0.3"/>
+                  </g>
+                ))}
+                {/* Roofline detail */}
+                <rect x="120" y="196" width="560" height="8" fill="#0a1f44"/>
+                <rect x="115" y="192" width="570" height="6" fill="#C9A961" opacity="0.15"/>
+                {/* Flag pole */}
+                <rect x="397" y="80" width="6" height="55" fill="#C9A961" opacity="0.7"/>
+                {/* Flag */}
+                <rect x="403" y="82" width="30" height="18" fill="#C9A961" opacity="0.5"/>
+                {/* Stars/lights */}
+                {[[200,90],[600,100],[100,120],[680,85]].map(([cx,cy],i)=>(
+                  <circle key={i} cx={cx} cy={cy} r="1.5" fill="white" opacity="0.4"/>
+                ))}
+                {/* Golden overlay at bottom */}
+                <rect x="0" y="530" width="800" height="70" fill="#0A1F44" opacity="0.7"/>
+              </svg>
+              {/* Label overlay */}
+              <div className="absolute inset-0 flex items-end p-6">
                 <div>
-                  <p className="font-serif text-gold text-5xl font-bold opacity-30 leading-none mb-2">§</p>
-                  <p className="font-serif text-white text-xl font-semibold">Our Islamabad Office</p>
-                  <p className="text-warm-400 text-sm">Blue Area, Jinnah Avenue</p>
+                  <p className="font-serif text-gold text-4xl font-bold opacity-25 leading-none mb-1">§</p>
+                  <p className="font-serif text-white text-lg font-semibold">Islamabad High Court</p>
+                  <p className="text-warm-400 text-xs">Established legal presence since 1999</p>
                 </div>
               </div>
-              {/* Grid pattern overlay */}
-              <div className="absolute inset-0 opacity-5"
-                style={{ backgroundImage: "linear-gradient(rgba(201,169,97,1) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,97,1) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
             </div>
 
             {/* Smaller offset "team" image */}
@@ -120,8 +194,8 @@ export default function About() {
 
             <div className="mt-8 flex items-start gap-6">
               {[
-                "Chambers-rated practitioners",
-                "Superior court experience",
+                "Islamabad High Court advocates",
+                "Supreme Court experience",
                 "Bilingual counsel (Urdu/English)",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-2">

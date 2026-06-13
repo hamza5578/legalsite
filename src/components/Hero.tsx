@@ -57,7 +57,7 @@ export default function Hero() {
           className="flex items-center gap-3 mb-8"
         >
           <span className="h-px w-10 bg-gold" />
-          <span className="section-label">New York &middot; Est. 1987</span>
+          <span className="section-label">Islamabad &middot; Est. 1999</span>
           <span className="h-px w-10 bg-gold" />
         </motion.div>
 
@@ -82,9 +82,9 @@ export default function Hero() {
           className="text-warm-200 leading-relaxed mb-10 max-w-2xl"
           style={{ fontSize: "1.125rem" }}
         >
-          For over 25 years, Shafi Law Associates has delivered unwavering
+          For over 20 years, Shafi Law Associates has delivered unwavering
           legal representation to corporations, institutions, and individuals
-          who demand excellence when the stakes are highest.
+          across Pakistan who demand excellence when the stakes are highest.
         </motion.p>
 
         {/* CTAs */}
@@ -113,28 +113,6 @@ export default function Hero() {
           </button>
         </motion.div>
 
-        {/* Trust micro-bar */}
-        <motion.div
-          variants={seq(4)}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-wrap justify-center items-center gap-6 mt-14"
-        >
-          {[
-            "Chambers USA Ranked",
-            "Super Lawyers Recognized",
-            "37+ Years of Excellence",
-            "2,400+ Matters Resolved",
-          ].map((badge) => (
-            <span
-              key={badge}
-              className="flex items-center gap-2 text-warm-400 text-xs tracking-wide"
-            >
-              <span className="w-1 h-1 rounded-full bg-gold inline-block flex-shrink-0" />
-              {badge}
-            </span>
-          ))}
-        </motion.div>
       </div>
 
       {/* Scroll indicator */}
