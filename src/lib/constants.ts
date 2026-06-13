@@ -4,7 +4,7 @@ export const FIRM_TAGLINE = "Trusted Legal Counsel. Proven Results.";
 export const FIRM_PHONE = "0334-9133334";
 export const FIRM_EMAIL = "info@shafilaw.com";
 export const FIRM_ADDRESS = "House No 500, Street 8\nF-10/2, Islamabad\nPakistan";
-export const FIRM_FOUNDED = "1999";
+export const FIRM_FOUNDED = "2008";
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -209,6 +209,6 @@ export const STATS = [
 ];
 
 export const ABOUT_PARAGRAPHS = [
-  "Founded in 1999, Shafi Law Associates began as a boutique practice with a single conviction: that clients in Pakistan's courts deserved the same calibre of representation available in the world's leading legal markets. Over two decades, that conviction has built one of Islamabad's most respected full-service practices.",
+  "Founded in 2008, Shafi Law Associates began as a boutique practice with a single conviction: that clients in Pakistan's courts deserved the same calibre of representation available in the world's leading legal markets. Over two decades, that conviction has built one of Islamabad's most respected full-service practices.",
   "Today our team appears before the Islamabad High Court, Pakistan's superior courts, and the country's principal regulatory bodies. We take on only the matters we can handle with full commitment — which means every client receives the focused attention their case demands, not the fragmented service of an overstretched firm.",
 ];

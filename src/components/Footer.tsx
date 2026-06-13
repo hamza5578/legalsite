@@ -53,7 +53,7 @@ export default function Footer() {
             </div>
             <p className="text-warm-400 text-sm leading-relaxed mb-8">
               A premier Islamabad law firm delivering sophisticated legal counsel since{" "}
-              <span className="text-warm-200">1999</span>. We represent individuals, corporations, and institutions with the precision and integrity that consequential matters demand.
+              <span className="text-warm-200">2008</span>. We represent individuals, corporations, and institutions with the precision and integrity that consequential matters demand.
             </p>
             <div className="flex items-center gap-3">
               {socials.map(({ label, href, Icon }) => (
