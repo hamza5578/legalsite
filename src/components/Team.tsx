@@ -35,8 +35,8 @@ export default function Team() {
           </p>
         </motion.div>
 
-        {/* Grid — 1 col / 2 col / 3 col */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid — 3 members, single centered row */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {TEAM_MEMBERS.map((member, i) => (
             <motion.div
               key={member.id}
