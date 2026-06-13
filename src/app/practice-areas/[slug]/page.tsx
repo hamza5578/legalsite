@@ -108,10 +108,10 @@ export default function PracticeAreaPage({ params }: { params: { slug: string } 
                   </Link>
                   <div className="mt-4 pt-4 border-t border-white/10">
                     <a
-                      href="tel:+925123456789"
+                      href="tel:03349133334"
                       className="text-warm-300 text-sm hover:text-gold transition-colors duration-200"
                     >
-                      Or call: +92 (51) 234-5678
+                      Or call: 0334-9133334
                     </a>
                   </div>
                 </div>

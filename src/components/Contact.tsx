@@ -69,7 +69,7 @@ export default function Contact() {
                 {FIRM_NAME}
               </h3>
               <p className="text-warm-400 text-sm mb-8">
-                Trusted legal counsel for over three decades.
+                Trusted legal counsel across Pakistan since 1999.
               </p>
 
               <div className="space-y-6">

@@ -1,9 +1,9 @@
 export const FIRM_NAME = "Shafi Law Associates";
 export const FIRM_DISPLAY = { primary: "Shafi Law", secondary: "Associates" };
 export const FIRM_TAGLINE = "Trusted Legal Counsel. Proven Results.";
-export const FIRM_PHONE = "+92 (51) 234-5678";
+export const FIRM_PHONE = "0334-9133334";
 export const FIRM_EMAIL = "info@shafilaw.com";
-export const FIRM_ADDRESS = "3rd Floor, Blue Area\nJinnah Avenue, Islamabad\nPakistan";
+export const FIRM_ADDRESS = "House No 500, Street 8\nF-10/2, Islamabad\nPakistan";
 export const FIRM_FOUNDED = "1999";
 
 export const NAV_LINKS = [
