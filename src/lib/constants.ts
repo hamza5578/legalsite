@@ -119,9 +119,9 @@ export const TEAM_MEMBERS = [
     id: 1,
     name: "Babar Manzoor",
     title: "Founding Partner",
-    role: "Senior Advocate Supreme Court",
+    role: "Advocate Supreme Court",
     specialization: "Civil Litigation & Constitutional Law",
-    bio: "Co-founder with extensive experience in constitutional matters and complex commercial litigation before Pakistan's apex courts.",
+    bio: "Founding Partner with extensive experience in constitutional matters and complex commercial litigation before Pakistan's apex courts.",
     image: "/images/team-1.jpg",
     linkedin: "#",
     email: "babar@shafilaw.com",
@@ -209,6 +209,6 @@ export const STATS = [
 ];
 
 export const ABOUT_PARAGRAPHS = [
-  "Founded in 1999 by Muhammad Shafi and Babar Manzoor, Shafi Law Associates began as a two-partner boutique with a single conviction: that clients in Pakistan's courts deserved the same calibre of representation available in the world's leading legal markets. Over two decades, that conviction has built one of Islamabad's most respected full-service practices.",
-  "Today our team of six advocates appears before the Islamabad High Court, Pakistan's superior courts, and the country's principal regulatory bodies. We take on only the matters we can handle with full commitment — which means every client receives the focused attention their case demands, not the fragmented service of an overstretched firm.",
+  "Founded in 1999, Shafi Law Associates began as a boutique practice with a single conviction: that clients in Pakistan's courts deserved the same calibre of representation available in the world's leading legal markets. Over two decades, that conviction has built one of Islamabad's most respected full-service practices.",
+  "Today our team appears before the Islamabad High Court, Pakistan's superior courts, and the country's principal regulatory bodies. We take on only the matters we can handle with full commitment — which means every client receives the focused attention their case demands, not the fragmented service of an overstretched firm.",
 ];
