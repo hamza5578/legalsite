@@ -55,7 +55,7 @@ export default function Navbar() {
               alt="Shafi Law Associates"
               width={690}
               height={441}
-              className="h-16 w-auto opacity-90 group-hover:opacity-100 transition-opacity duration-200"
+              className="h-16 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-200"
               priority
             />
           </Link>
